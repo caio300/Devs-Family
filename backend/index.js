@@ -19,7 +19,7 @@ const PORT = '3000';
 
 app.get('/devs', getAllDevs);
 app.get('/login', validateEmail, validatePassword, token);
-app.post('/talker', validateToke, validateName, validateAge, validateArea, validateImage, validateLinkedin, validateGithub)
+app.post('/devs', validateToke, validateName, validateAge, validateArea, validateImage, validateLinkedin, validateGithub)
 
 app.listen(PORT, () => {
   console.log('Online');
