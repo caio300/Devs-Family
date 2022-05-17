@@ -24,7 +24,7 @@ app.get('/devs', getAllDevs);
 app.get('/login', validateEmail, validatePassword, token);
 app.post('/devs', validateToke, validateName, validateAge, validateArea, validateImage, validateLinkedin, validateGithub, addNewDev);
 app.put('/devs/:id', validateToke, validateName, validateAge, validateArea, validateImage, validateLinkedin, validateGithub, editDev);
-app.delete('/devsq:id', validateToke, deleteDev)
+app.delete('/devs:id', validateToke, deleteDev)
 
 app.listen(PORT, () => {
   console.log('Online');
