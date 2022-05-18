@@ -7,14 +7,14 @@ const addNewDev = async (req, res) => {
   const newDev = {
     name,
     age,
-    id: talkers.length + 1,
+    id: devs.length + 1,
     area,
     img,
     linkedin,
     github
   };
-  talkers.push(newDev);
-  fs.writeFile('../devs.json', JSON.stringify(devs));
+  devs.push(newDev);
+  fs.writeFile('devs.json', JSON.stringify(devs));
   res.status(201).json(newDev);
 };
 

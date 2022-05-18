@@ -12,7 +12,7 @@ const editDev = async (req, res) => {
   dev.img = img;
   dev.linkedin = linkedin;
   dev.github = github;
-  fs.writeFile('../devs.json', JSON.parse(devs));
+  fs.writeFile('devs.json', JSON.stringify(devs));
   res.status(200).json(dev);
 }
 
