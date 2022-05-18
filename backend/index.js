@@ -18,10 +18,10 @@ const deleteDev = require('./middleware/deleteDev');
 const app = express();
 app.use(bodyParser.json());
 
-const PORT = '3000';
+const PORT = '3001';
 
 app.get('/devs', getAllDevs);
-app.get('/login', validateEmail, validatePassword, token);
+app.post('/login', validateEmail, validatePassword, token);
 app.post('/devs', validateToke, validateName, validateAge, validateArea, validateImage, validateLinkedin, validateGithub, addNewDev);
 app.put('/devs/:id', validateToke, validateName, validateAge, validateArea, validateImage, validateLinkedin, validateGithub, editDev);
 app.delete('/devs/:id', validateToke, deleteDev);
