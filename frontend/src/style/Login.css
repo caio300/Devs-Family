@@ -40,3 +40,16 @@
 .label-inputs input {
   margin-top: 5px;
 }
+
+.container-form p {
+  display: flex;
+  flex-wrap: wrap;
+  width: 180px;
+  font-size: 10px;
+  color: red;
+}
+
+.div-message-error {
+  height: 40px;
+  width: 180px;
+}

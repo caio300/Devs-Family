@@ -3,13 +3,13 @@ const validateEmail = (req, res, next) => {
   const testEmail = /\S+@\S+\.\S+/i.test(email);
 
   if (!email) {
-    res.status(400).json({
+    return res.status(400).json({
       message: 'O campo "email" é obrigatório',
     });
   }
 
   if (!testEmail) {
-    res.status(400).json({
+    return res.status(400).json({
       message: 'O "email" deve ter o formato "email@email.com"',
     });
   }

@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const getAllDevs = require('./middleware/getAllDevs');
 const validateEmail = require('./middleware/validateEmail');
 const validatePassword = require('./middleware/validatePassword');
@@ -16,6 +17,7 @@ const editDev = require('./middleware/editDev');
 const deleteDev = require('./middleware/deleteDev');
 
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
 const PORT = '3001';
