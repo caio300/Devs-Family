@@ -2,15 +2,32 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   height: 100vh;
+  position: fixed;
 }
 
 .component-modal {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 400px;
-  height: 400px;
-  position: absolute;
+  width: 70%;
+  box-shadow: rgba(0, 0, 0, 0.80) 0px 0px 9999px 700px;
+  z-index: 1;
+  background-color: white;
+}
+
+.modal-image {
+  width: 500px;
+  height: 100%;
+}
+
+.modal-image img {
+  width: 100%;
+}
+
+.modal-infos {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 40px 0 0 40px;
+  gap: 15px;
 }

@@ -34,8 +34,8 @@ const Home = () => {
 
   return (
     <div className='page-home'>
-      <Header />
       { showModal && <DevModal setShowModal={setShowModal}/> }
+      <Header />
       <section className='section-home'>
         <div className='header-section'>
           <h1>Devs</h1>
