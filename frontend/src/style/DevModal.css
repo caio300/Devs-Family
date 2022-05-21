@@ -1,0 +1,16 @@
+.modal-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100vh;
+}
+
+.component-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+}

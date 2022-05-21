@@ -1,0 +1,61 @@
+.section-home {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.header-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: hsl(0, 0%, 13%);
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.header-section button {
+  border: none;
+  background: #212121;
+  color: white;
+  height: 40px;
+  width: 200px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.cards-devs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.dev {
+  height: 500px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.img-dev {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+.text-dev {
+  color: #636363;
+  margin-top: 5px;
+}

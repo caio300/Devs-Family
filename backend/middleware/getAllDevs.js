@@ -1,13 +1,13 @@
 const fs = require('fs');
 
 const getAllDevs = async (_req, res) => {
-  const talkers = await JSON.parse(fs.readFileSync('devs.json'));
+  const devs = await JSON.parse(fs.readFileSync('devs.json'));
 
-  if (!talkers) {
+  if (!devs) {
     res.status(200).json([]);
   }
 
-  res.status(200).json(talkers);
+  res.status(200).json(devs);
 };
 
 module.exports = getAllDevs;

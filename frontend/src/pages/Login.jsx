@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import logo from '../logo-devs.png';
-import api from '../api/index'
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import "../style/Login.css";
@@ -15,7 +14,7 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const tokenAPI = await api.post('/login', { email, password });
+      const tokenAPI = await axios.post('http://localhost:3001/login', { email, password });
       if (tokenAPI.data.token) {
         localStorage.setItem('token', tokenAPI.data.token)
         history.push('/home');
