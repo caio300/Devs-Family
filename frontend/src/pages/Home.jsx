@@ -1,14 +1,12 @@
 import React, {useContext, useState} from 'react';
 import Header from '../components/Header';
 import '../style/Home.css';
-import apagar from '../icon-apagar.png';
-import editar from '../icon-editar.png';
+import Buttons from '../components/ButtonsSetings'
 import devsContext from '../context/Context';
 import DevModal from '../components/DevModal';
 
 const Home = () => {
-  const {devs, setDevShowInfo} = useContext(devsContext);
-  const [ showModal, setShowModal ] = useState(false); 
+  const {devs, setDevShowInfo, showModal, setShowModal} = useContext(devsContext);
 
   const renderDev = (dev) => {
     const objDev = {
@@ -24,17 +22,14 @@ const Home = () => {
         <img id={dev.id} src={dev.img} alt={dev.name} className="img-dev" onClick={() => {setDevShowInfo(objDev); setShowModal(true)}}/>
         <p>{dev.name}</p>
         <p className='text-dev'>{dev.area}</p>
-        <div className='icons-div'>
-          <img className='icon' src={apagar} alt="Icon apagar" />
-          <img className='icon' src={editar} alt="Icon editar" />
-        </div>
+        <Buttons />
       </div>
     )
   };
 
   return (
     <div className='page-home'>
-      { showModal && <DevModal setShowModal={setShowModal}/> }
+      { showModal && <DevModal /> }
       <Header />
       <section className='section-home'>
         <div className='header-section'>

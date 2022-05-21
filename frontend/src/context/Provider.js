@@ -5,7 +5,7 @@ import axios from "axios";
 const Provider = ({children}) => {
   const [ devs, setDevs ] = useState('');
   const [ devShowInfo, setDevShowInfo] = useState({});
-
+  const [ showModal, setShowModal ] = useState(false);
 
   const fetchDevs = async () => {
 
@@ -22,6 +22,8 @@ const Provider = ({children}) => {
     devs,
     devShowInfo,
     setDevShowInfo,
+    showModal,
+    setShowModal
   };
 
   return (
