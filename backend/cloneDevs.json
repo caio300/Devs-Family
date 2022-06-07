@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Bárbara Queiroz Soares",
+    "age": 29,
+    "id": 1,
+    "area": "Full-Stack",
+    "img": "https://media-exp1.licdn.com/dms/image/D4D35AQErjDNaqOqXoQ/profile-framedphoto-shrink_800_800/0/1649425365378?e=1653516000&v=beta&t=S16bJic_pDZG75wpIWemr1sFaXIFYfMBcj-oxet2BDI",
+    "linkedin": "https://www.linkedin.com/in/barbaraqueirozsoares/",
+    "github": "https://github.com/Barbaraqsoares"
+  },
+  {
+    "name": "Caio Queiroz Soares",
+    "age": 27,
+    "id": 2,
+    "area": "Front-End",
+    "img": "https://media-exp1.licdn.com/dms/image/C4D03AQG1OetynYjn2w/profile-displayphoto-shrink_800_800/0/1650892660731?e=1658361600&v=beta&t=BFSAJXR40vDbIgcc2jBkhbqR-NyodPfl5GHH_WM2vo4",
+    "linkedin": "https://www.linkedin.com/in/caioqs/",
+    "github": "https://github.com/caio300"
+  },
+  {
+    "name": "Lucas Soares Lopes",
+    "age": 26,
+    "id": 3,
+    "area": "Back-End",
+    "img": "https://media-exp1.licdn.com/dms/image/C4D03AQFuFlEFzFAivQ/profile-displayphoto-shrink_800_800/0/1540389860109?e=1658361600&v=beta&t=0ZMYHL8CHDb6ckb086TRwxCh_H0RnTrpVy7KdfTHulw",
+    "linkedin": "https://www.linkedin.com/in/lucas-soares-lopes/",
+    "github": "https://github.com/Lucaslopes1995"
+  },
+  {
+    "name": "Nícolas Soares Tozato",
+    "age": 30,
+    "id": 4,
+    "area": "Front-End",
+    "img": "https://media-exp1.licdn.com/dms/image/C4D03AQFsjVSYoTfcIg/profile-displayphoto-shrink_200_200/0/1641498047263?e=1658361600&v=beta&t=JD2tl4mRlgZS6JDQnLOd4YcmMgv3PIiUC8XP5-N_0so",
+    "linkedin": "https://www.linkedin.com/in/nícolas-tozato-a03a7520b/",
+    "github": "https://github.com/ntozato"
+  },
+  {
+    "name": "Renato Soares",
+    "age": 60,
+    "id": 5,
+    "area": "Java",
+    "img": "https://media-exp1.licdn.com/dms/image/C4E03AQGsODvfJb0pQg/profile-displayphoto-shrink_800_800/0/1541090678425?e=1658361600&v=beta&t=Mro4jELR8XdzqGQgLHeIt3grerWVhcj8hqfxtRpapmI",
+    "linkedin": "https://www.linkedin.com/in/renato-soares-9a4322117/",
+    "github": "https://github.com/RenSoares"
+  }
+]
