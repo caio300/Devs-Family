@@ -13,7 +13,7 @@ const editDev = async (req, res) => {
   dev.linkedin = linkedin;
   dev.github = github;
   fs.writeFile('devs.json', JSON.stringify(devs));
-  res.status(200).json(dev);
+  res.status(200).json({ message: "Dev editado com sucesso !"});
 }
 
 module.exports = editDev;

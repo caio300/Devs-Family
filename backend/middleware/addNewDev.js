@@ -15,7 +15,7 @@ const addNewDev = async (req, res) => {
   };
   devs.push(newDev);
   fs.writeFile('devs.json', JSON.stringify(devs));
-  res.status(201).json(newDev);
+  res.status(201).json({message: "Dev criado com sucesso"});
 };
 
 module.exports = addNewDev;

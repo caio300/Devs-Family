@@ -4,12 +4,14 @@ import '../style/Home.css';
 import Buttons from '../components/ButtonsSetings'
 import devsContext from '../context/Context';
 import DevModal from '../components/DevModal';
+import AddDevModal from '../components/AddDevModal';
 
 const Home = () => {
-  const {devs, setDevShowInfo, showModal, setShowModal} = useContext(devsContext);
+  const {devs, setDevShowInfo, showModal, setShowModal, showModalAdd, setShowModalAdd} = useContext(devsContext);
 
   const renderDev = (dev) => {
     const objDev = {
+      id: dev.id,
       name: dev.name,
       age: dev.age,
       img: dev.img,
@@ -30,11 +32,12 @@ const Home = () => {
   return (
     <div className='page-home'>
       { showModal && <DevModal /> }
+      { showModalAdd && <AddDevModal />}
       <Header />
       <section className='section-home'>
         <div className='header-section'>
           <h1>Devs</h1>
-          <button>Adicionar Devs</button>
+          <button onClick={() => setShowModalAdd(true)}>Adicionar Devs</button>
         </div>
         <div className='cards-devs'>
           {devs && devs.map((dev) => renderDev(dev))}
