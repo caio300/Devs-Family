@@ -5,6 +5,7 @@ import axios from "axios";
 const Provider = ({children}) => {
   const [ devs, setDevs ] = useState('');
   const [ devShowInfo, setDevShowInfo] = useState({});
+  const [ deleteDev, setDeleteDev ] = useState(false);
   const [ showModal, setShowModal ] = useState(false);
   const [ showModalAdd, setShowModalAdd ] = useState(false);
 
@@ -20,7 +21,7 @@ const Provider = ({children}) => {
 
   useEffect(() => {
     fetchDevs();
-  }, [showModalAdd]);
+  }, [showModalAdd, deleteDev]);
 
   const data = {
     devs,
@@ -29,7 +30,9 @@ const Provider = ({children}) => {
     showModal,
     setShowModal,
     showModalAdd,
-    setShowModalAdd
+    setShowModalAdd,
+    deleteDev,
+    setDeleteDev
   };
 
   return (

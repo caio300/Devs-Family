@@ -4,7 +4,7 @@ import devsContext from "../context/Context";
 const MessageModal = ({value}) => {
   const { setShowModalAdd } = useContext(devsContext);
   const { infoModal, setInfoModal } = value;
-
+  console.log(value);
   return (
     <div>
       <div>

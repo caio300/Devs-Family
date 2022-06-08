@@ -1,7 +1,6 @@
 import React, {useContext} from 'react';
 import devsContext from '../context/Context';
 import close from '../icon-close.png'
-import Buttons from '../components/ButtonsSetings';
 import '../style/DevModal.css';
 
 const DevModal = () => {
@@ -20,7 +19,6 @@ const DevModal = () => {
           <a href={devShowInfo.linkedin}>{devShowInfo.linkedin}</a>
           <h3>Github</h3>
           <a href={devShowInfo.github}>{devShowInfo.github}</a>
-          <Buttons />
         </div>
         <img className='img-close' src={close} alt="Fechar" onClick={() => setShowModal(false)}/>
       </div>

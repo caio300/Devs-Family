@@ -25,7 +25,7 @@ const AddDevModal = () => {
     try {
       const token = localStorage.getItem('token');
       const addDev = await axios.post('http://localhost:3001/devs', { ...newDev }, {headers: { authorization: token }});
-      setInfoModal({message: addDev.message, modal: true})
+      setInfoModal({message: addDev.data.message, modal: true})
     }
     catch (error) {
       console.log(error.response.data.message);

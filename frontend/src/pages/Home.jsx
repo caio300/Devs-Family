@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import Header from '../components/Header';
 import '../style/Home.css';
 import Buttons from '../components/ButtonsSetings'
@@ -10,21 +10,12 @@ const Home = () => {
   const {devs, setDevShowInfo, showModal, setShowModal, showModalAdd, setShowModalAdd} = useContext(devsContext);
 
   const renderDev = (dev) => {
-    const objDev = {
-      id: dev.id,
-      name: dev.name,
-      age: dev.age,
-      img: dev.img,
-      area: dev.area,
-      linkedin: dev.linkedin,
-      github: dev.github
-    }
     return (
       <div key={dev.id} className="dev">
-        <img id={dev.id} src={dev.img} alt={dev.name} className="img-dev" onClick={() => {setDevShowInfo(objDev); setShowModal(true)}}/>
+        <img id={dev.id} src={dev.img} alt={dev.name} className="img-dev" onClick={() => {setDevShowInfo({...dev}); setShowModal(true)}}/>
         <p>{dev.name}</p>
         <p className='text-dev'>{dev.area}</p>
-        <Buttons />
+        <Buttons value={{...dev}}/>
       </div>
     )
   };
