@@ -8,6 +8,7 @@ const Provider = ({children}) => {
   const [ deleteDev, setDeleteDev ] = useState(false);
   const [ showModal, setShowModal ] = useState(false);
   const [ showModalAdd, setShowModalAdd ] = useState(false);
+  const [ showModalEdit, setShowModalEdit ] = useState(false);
 
   const fetchDevs = async () => {
 
@@ -21,7 +22,7 @@ const Provider = ({children}) => {
 
   useEffect(() => {
     fetchDevs();
-  }, [showModalAdd, deleteDev]);
+  }, [showModalAdd, deleteDev, showModalEdit]);
 
   const data = {
     devs,
@@ -32,7 +33,9 @@ const Provider = ({children}) => {
     showModalAdd,
     setShowModalAdd,
     deleteDev,
-    setDeleteDev
+    setDeleteDev,
+    showModalEdit,
+    setShowModalEdit
   };
 
   return (
