@@ -1,0 +1,81 @@
+.modal-background-editDev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.component-modal-editDev {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  box-shadow: rgba(0, 0, 0, 0.80) 0px 0px 9999px 700px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+
+.modal-infos-editDev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  padding: 40px;
+  padding-right: 0;
+}
+
+.modal-infos-editDev form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-infos-editDev label {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-infos-editDev div {
+  display: flex;
+  gap: 15px;
+}
+
+.modal-infos-editDev h2 {
+  margin-bottom: 20px;
+}
+
+.img-close-editDev {
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  background-color: white;
+  border: none;
+  margin: 10px;
+  margin-left: 0;
+  width: 25px;
+  height: 25px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.modal-infos-editDev button {
+  border: none;
+  background: #212121;
+  color: white;
+  height: 30px;
+  width: 200px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.button-save-editDev {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

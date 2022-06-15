@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import devsContext from "../context/Context";
 import MessageModal from "./MessageModal";
-import close from '../icon-close.png'
+import close from '../icon-close.png';
 import '../style/AddDevModal.css'
 
 const AddDevModal = () => {

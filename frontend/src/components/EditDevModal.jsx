@@ -1,8 +1,9 @@
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import devsContext from "../context/Context";
-import Header from "./Header";
 import MessageModal from "./MessageModal";
+import close from '../icon-close.png';
+import '../style/EditDevModal.css';
 
 const EditDevModal = ({value}) => {
   const { setEditDevModal } = value;
@@ -50,41 +51,50 @@ const EditDevModal = ({value}) => {
   }, [newDev]);
 
   return (
-    <div>
-      <div>
-        <Header />
+    <div className="modal-background-editDev">
+      <div className="component-modal-editDev">
         {infoModal.modal && <MessageModal value={{infoModal, setInfoModal, setEditDevModal}} />}
-        <div>
+        <div className="modal-infos-editDev">
           <h2>Adiconar Dev</h2>
           <form onSubmit={handleSubmmit}>
-            <label htmlFor="name">
-              Nome
-              <input value={newDev.name} id="name" type="text" onChange={({target}) => setNewDev({...newDev, name: target.value})}/>
-            </label>
-            <label htmlFor="idade">
-              Idade
-              <input value={newDev.age} id="idade" type="text" onChange={({target}) => setNewDev({...newDev, age: parseInt(target.value)})}/>
-            </label>
-            <label htmlFor="area">
-              Área
-              <input value={newDev.area} id="area" type="text" onChange={({target}) => setNewDev({...newDev, area: target.value})}/>
-            </label>
-            <label htmlFor="linkedin">
-              Linkedin
-              <input value={newDev.linkedin} id="linkedin" type="text" onChange={({target}) => setNewDev({...newDev, linkedin: target.value})}/>
-            </label>
-            <label htmlFor="github">
-              Github
-              <input value={newDev.github} id="github" type="text" onChange={({target}) => setNewDev({...newDev, github: target.value})}/>
-            </label>
-            <label htmlFor="imagem">
-              URL da imagem
-              <input value={newDev.img} id="imagem" type="text" onChange={({target}) => setNewDev({...newDev, img: target.value})}/>
-            </label>
-            <button disabled={disableButton} type="submmit">Salvar</button>
-            <button type="button" onClick={() => setEditDevModal(false)}>Cancelar</button>
+            <div>
+              <label htmlFor="name">
+                Nome
+                <input value={newDev.name} id="name" type="text" onChange={({target}) => setNewDev({...newDev, name: target.value})}/>
+              </label>
+              <label htmlFor="idade">
+                Idade
+                <input value={newDev.age} id="idade" type="text" onChange={({target}) => setNewDev({...newDev, age: parseInt(target.value)})}/>
+              </label>
+            </div>
+            <div>
+              <label htmlFor="area">
+                Área
+                <input value={newDev.area} id="area" type="text" onChange={({target}) => setNewDev({...newDev, area: target.value})}/>
+              </label>
+              <label htmlFor="linkedin">
+                Linkedin
+                <input value={newDev.linkedin} id="linkedin" type="text" onChange={({target}) => setNewDev({...newDev, linkedin: target.value})}/>
+              </label>
+            </div>
+            <div>
+              <label htmlFor="github">
+                Github
+                <input value={newDev.github} id="github" type="text" onChange={({target}) => setNewDev({...newDev, github: target.value})}/>
+              </label>
+              <label htmlFor="imagem">
+                URL da imagem
+                <input value={newDev.img} id="imagem" type="text" onChange={({target}) => setNewDev({...newDev, img: target.value})}/>
+              </label>
+            </div>
+            <div className="button-save-editDev">
+              <button disabled={disableButton} type="submmit">Salvar</button>
+            </div>
           </form>
         </div>
+        <button className="img-close-editDev" type="button" onClick={() => setEditDevModal(false)}>
+          <img src={close} alt="Fechar" />
+        </button>
       </div>
     </div>
   );
