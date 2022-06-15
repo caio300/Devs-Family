@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import devsContext from "../context/Context";
+import '../style/MessageModal.css';
 
 const MessageModal = ({value}) => {
   const { showModalEdit, setShowModalEdit, setShowModalAdd } = useContext(devsContext);
@@ -7,16 +8,17 @@ const MessageModal = ({value}) => {
 
   const handleClick = () => {
     setInfoModal({...infoModal, modal: false});
-    setShowModalAdd(false);
-    setShowModalEdit(!showModalEdit);
-    setEditDevModal(false);
   };
 
   return (
-    <div>
-      <div>
-        <h2>{infoModal.message}</h2>
-        <button onClick={() => handleClick()}>Sair</button>
+    <div className="modal-background-message">
+      <div className="component-modal-message">
+        <div className="modal-infos-message">
+          <h2>{infoModal.message}</h2>
+          <div className="button-message">
+            <button onClick={() => handleClick()}>Sair</button>
+          </div>
+        </div>
       </div>
     </div>
   );
