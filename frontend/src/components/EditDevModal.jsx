@@ -28,6 +28,7 @@ const EditDevModal = ({value}) => {
       const token = localStorage.getItem('token');
       const addDev = await axios.put(`http://localhost:3001/devs/${devShowInfo.id}`, { ...newDev }, {headers: { authorization: token }});
       setInfoModal({message: addDev.data.message, modal: true});
+      setShowModalEdit(!showModalEdit);
     }
     catch (error) {
       console.log(error.response.data.message);

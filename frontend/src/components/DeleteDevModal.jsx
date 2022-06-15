@@ -31,9 +31,11 @@ const DeleteDevModal = ({value}) => {
           <div className="button-save-deleteDev">
             <button onClick={() => deleteDev(devShowInfo.id)}>Apagar</button>        
           </div>
-        </div> : <div>
+        </div> : <div className="message-modal-delete">
           <h2>{messageDeleteApi}</h2>
-          <button onClick={() => {setDeleteModal(false); setDeleteDev(!isDeleteDev)}}>Fechar</button>
+          <div className="button-save-deleteDev">
+            <button onClick={() => {setDeleteModal(false); setDeleteDev(!isDeleteDev)}}>Fechar</button>
+          </div>
         </div>}
         <button className="img-close-deleteDev" onClick={() => setDeleteModal(false)}>
             <img src={close} alt="Fechar" />
