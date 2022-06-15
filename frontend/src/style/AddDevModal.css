@@ -1,0 +1,78 @@
+.modal-background-addDev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+
+.component-modal-addDev {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  box-shadow: rgba(0, 0, 0, 0.80) 0px 0px 9999px 700px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.modal-infos-addDev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  padding: 40px;
+  padding-right: 0;
+}
+
+.modal-infos-addDev form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-infos-addDev label {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-infos-addDev div {
+  display: flex;
+  gap: 15px;
+}
+
+.modal-infos-addDev h2 {
+  margin-bottom: 20px;
+}
+
+.img-close-addDev {
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  background-color: white;
+  border: none;
+  margin: 10px;
+  margin-left: 0;
+  width: 25px;
+  height: 25px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.modal-infos-addDev button {
+  border: none;
+  background: #212121;
+  color: white;
+  height: 30px;
+  width: 200px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.button-save {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
